@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../font/flaticon.ttf") format("truetype"),
+url("https://www.17sucai.com/preview/1097306/2021-07-19/tourx/assets/font/flaticon.woff?2c5a1d331b80809feb2c65bb347d8792") format("woff"),
+url("https://www.17sucai.com/preview/1097306/2021-07-19/tourx/assets/font/flaticon.woff2?2c5a1d331b80809feb2c65bb347d8792") format("woff2"),
+url("https://www.17sucai.com/preview/1097306/2021-07-19/tourx/assets/font/flaticon.eot?2c5a1d331b80809feb2c65bb347d8792#iefix") format("embedded-opentype"),
+url("https://www.17sucai.com/preview/1097306/2021-07-19/tourx/assets/font/flaticon.svg?2c5a1d331b80809feb2c65bb347d8792#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-user:before {
+    content: "\f101";
+}
+.flaticon-magnifier:before {
+    content: "\f102";
+}
+.flaticon-next:before {
+    content: "\f103";
+}
+.flaticon-double-checking:before {
+    content: "\f104";
+}
+.flaticon-arrival:before {
+    content: "\f105";
+}
+.flaticon-calendar:before {
+    content: "\f106";
+}
+.flaticon-play-button-arrowhead:before {
+    content: "\f107";
+}
+.flaticon-guide:before {
+    content: "\f108";
+}
+.flaticon-trust:before {
+    content: "\f109";
+}
+.flaticon-experience:before {
+    content: "\f10a";
+}
+.flaticon-traveller:before {
+    content: "\f10b";
+}
+.flaticon-comment:before {
+    content: "\f10c";
+}
+.flaticon-footprints:before {
+    content: "\f10d";
+}
+.flaticon-gallery:before {
+    content: "\f10e";
+}
+.flaticon-clock:before {
+    content: "\f10f";
+}
+.flaticon-group:before {
+    content: "\f110";
+}
+.flaticon-translate:before {
+    content: "\f111";
+}
+.flaticon-clipboard:before {
+    content: "\f112";
+}
+.flaticon-info:before {
+    content: "\f113";
+}
+.flaticon-public-transport:before {
+    content: "\f114";
+}
+.flaticon-reply-arrow:before {
+    content: "\f115";
+}
+.flaticon-clock-1:before {
+    content: "\f116";
+}
+.flaticon-thumbs-up:before {
+    content: "\f117";
+}
+.flaticon-customer-service:before {
+    content: "\f118";
+}

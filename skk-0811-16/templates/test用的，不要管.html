@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>作業</title>
+</head>
+<body>
+<button onclick="add(1)">click me</button>
+<button onclick="add(2)">click me</button>
+<button onclick="add(3)">click me</button>
+<input type="text" id="text" value=""/>
+
+<script>
+    function add(buttonIndex) {
+        var x = document.getElementById("text");
+        x.value = buttonIndex ;
+    }
+</script>
+</body>
+</html>

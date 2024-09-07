@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('static/picture/loginbackground.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .form_left{
+            background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(0, 123, 255, 0.5) 50%);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-top: 50px;
+            height: 45vh;
+        }
+
+        .form_right {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-top: 50px;
+            height: 45vh;
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="form_left">
+    <div>
+        <h1 style="color: rgb(255,255, 255);margin-top: 12vh;text-align: center;">欢迎来到旅游助手</h1>
+        <h2 style="color: rgb(255,255, 255);margin-top: 5vh;">W E L C O M E</h2>
+    </div>
+</div>
+<form method="post" action="/login" class="form_right">
+    <h2>登录</h2>
+    <label for="username">用户名：</label>
+    <input type="text" name="username" required>
+    <label for="password">密码：</label>
+    <input type="password" name="password" required>
+    <a href='http://127.0.0.1:5000/index.html'>Login</button>
+
+    <p>没有账户吗？ <a href="/register">点这里注册</a>.</p>
+</form>
+
+
+</body>
+</html>

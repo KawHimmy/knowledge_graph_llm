@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <meta name="theme-color" content="#ffc91d"/>
+    <link rel="icon" href="static/picture/logo.png" sizes="32x32"/>
+    <link rel="icon" href="static/picture/logo-2.png" sizes="192x192"/>
+    <link href="static/css/kico.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/paul.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="static/css/animate.css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/boxicons.min.css">
+    <link rel="stylesheet" href="static/css/flaticon.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/responsive.css">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader-wrap">
+            <div class="preloader-logo">
+                <img src="static/picture/logo.png" alt="" class="img-fluid">
+            </div>
+           <div class="plane-path">
+               <img src="static/picture/Plane.png" alt="" class="animi-plane">
+           </div>
+        </div>
+    </div>
+
+
+
+     <header>
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                       <div class="navbar-wrap">
+                        <div class="logo d-flex justify-content-between">
+                            <a href="" class="navbar-brand"> <img src="static/picture/logo.png" alt=""></a>
+                        </div>
+                        <div class="navbar-icons">
+                            <div class="searchbar-open">
+                                <i class="flaticon-magnifier"></i>
+                            </div>
+
+                            <div class="mobile-menu d-flex ">
+                                <div class="top-search-bar m-0 d-block d-xl-none">
+                                </div>
+
+                                <a href="javascript:void(0)" class="hamburger d-block d-xl-none">
+                                    <span class="h-top"></span>
+                                    <span class="h-middle"></span>
+                                    <span class="h-bottom"></span>
+                                </a>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <nav class="main-nav">
+                            <div class="navber-logo-sm">
+                                <img src="static/picture/logo-2.png" alt="" class="img-fluid">
+                            </div>
+                            <ul>
+                                <li><a href="index.html">主页</a></li>
+                                <li><a href="chat.html">智能化对话</a></li>
+                                <li><a href="tag.html">偏好推荐</a></li>
+                                <li><a href="map.html">城市路线查询 </a></li>
+                                <li><a href="contact.html">联系我们 </a></li>
+                            </ul>
+                            <div class="navbar-icons-2">
+                                <a href="penson.html">
+                                    <i class="flaticon-user"></i>
+                                </a>
+                            </div>
+                            <div class="sidebar-contact">
+                                <ul>
+                                    <li class="sidebar-single-contact"><i class='bx bxs-phone'></i> <a href="tel:666">+1 20211120180</a></li>
+                                    <li class="sidebar-single-contact"><i class='bx bxs-envelope'></i><a href="javascript:;"><span class="__cf_email__" data-cfemail="2f464149406f4a574e425f434a014c4042">[email&#160;protected]</span></a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <form>
+                <div class="main-searchbar">
+                    <div class="searchbar-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+                    <input type="text" placeholder="Search Here......">
+                    <div class="searchbar-icon">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <div class="avatar" onclick="changeImage()">
+            <img id="avatarImage" src="static/image/avatar.jpg" title="AI酱" alt="Avatar Image">
+        </div>
+    </aside>
+<main>
+    <section id="info">
+        <div class="wrap">
+            <h2 class="title">个人资料</h2>
+            <div class="row">
+                <div class="col-l-4">
+                    <p>姓名：<span id="name" class="editable" onclick="makeEditable('name')">待输入......</span></p>
+                    <p>性别：<span id="gender" class="editable" onclick="makeEditable('gender')">待输入......</span></p>
+                    <p>年龄：<span id="age" class="editable" onclick="makeEditable('age')">待输入......</span></p>
+                    <p>学校：<span id="school" class="editable" onclick="makeEditable('school')">待输入......</span></p>
+                </div>
+                <div class="col-l-4">
+                    <p>QQ：<span id="qq" class="editable" onclick="makeEditable('qq')">待输入......</span></p>
+                    <p>邮箱：<span id="email" class="editable" onclick="makeEditable('email')">待输入......</span></p>
+                </div>
+                <div class="col-l-4">
+                    <p>自我介绍：<span id="message" class="editable" onclick="makeEditable('message')">待输入......</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="wrap">
+            <h2 class="title">掌握的技能</h2>
+            <div class="row scrollable">
+                <div class="col-s-6 col-m-4 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-html5"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>开摆</h3>
+                        <p>通过开摆降低同学们的关注度</p>
+                        <p>更方便我们开卷</p>
+                    </div>
+                </div>
+                <div class="col-s-6 col-m-4 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-css3"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>睡大觉</h3>
+                        <p>我们看似是在睡大觉</p>
+                        <p>实则暗地偷卷</p>
+                    </div>
+                </div>
+                <div class="col-s-6 col-m-4 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>聊QQ</h3>
+                        <p>看似是在聊QQ</p>
+                        <p>实则暗中讨论如何卷翻同学们</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<script>
+    function makeEditable(id) {
+        var element = document.getElementById(id);
+        var content = element.innerText.trim(); // 使用trim()去掉前后空格
+
+        var input = document.createElement("input");
+        input.type = "text";
+        input.value = content;
+
+        input.onblur = function () {
+            var newValue = input.value.trim();
+            if (newValue !== "") {
+                element.innerText = newValue;
+            } else {
+                element.innerText = "待输入......";
+            }
+        };
+
+        element.innerHTML = "";
+        element.appendChild(input);
+        input.focus();
+    }
+</script>
+<script>
+    function changeImage() {
+        var imageUrl = prompt("请输入新图片的URL：");
+
+        if (imageUrl !== null && imageUrl !== "") {
+            // 获取图片元素
+            var avatarImage = document.getElementById("avatarImage");
+
+            // 更改图片的src属性
+            avatarImage.src = imageUrl;
+        }
+    }
+</script>
+<script src="static/js/kico.js"></script>
+<script src="static/js/paul.js"></script>
+<script src="static/js/jquery-3.6.0.min.js"></script>
+<script src="static/js/owl.carousel.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery-ui.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/jquery.magnific-popup.min.js"></script>
+<script src="static/js/wow.min.js"></script>
+<script src="static/js/typed.js"></script>
+<script src="static/js/main.js"></script>
+</body>
+</html>

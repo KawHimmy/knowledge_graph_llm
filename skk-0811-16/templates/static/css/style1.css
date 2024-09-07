@@ -1,0 +1,200 @@
+/* Reset some default styling */
+body, h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.chatbot-toggler{
+  position: fixed;
+  right: 800px;
+  bottom: 720px;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  background:#f5c43f ;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px; /* 可以根据需要调整头像和文本之间的间距 */
+}
+
+.show-chatcontainer .chatbot-toggler{
+  transform: rotate(90deg);
+}
+.chatbot-toggler span{
+  position: absolute;
+}
+.chatbot-toggler img{
+  height: 40px;
+  width: 40px;
+}
+.chatbot-toggler span:last-child{
+  opacity: 0;
+}
+.show-chatcontainer .chatbot-toggler span:first-child,
+.chatbot-toggler span:last-child{
+  opacity: 0;
+}
+
+.show-chatcontainer .chatbot-toggler span:last-child{
+  opacity: 1;
+}
+
+.chat-container {
+  position: fixed;
+  top:17%;
+  right: 9%;
+  width: 40%;
+  height: 68%;
+  transform: scale(0.5);
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background-color:  #f5f3f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transform-origin: bottom right;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 0.1s ease;
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+
+}
+
+
+
+
+.header {
+  text-align: left;
+  background-color: #f5f3f0;
+  color: #4d4c4c;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-messages {
+  overflow-y:auto;
+  padding: 30px;
+  height: 600px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  color:  #f5f3f0;
+  align-items: center;
+  margin-right: 0;
+}
+
+.message {
+  margin: 7px;
+  font-size: 1rem;
+  padding: 10px 14px;
+}
+
+
+.input-message {
+  display: inline-block;
+  background-color: #abbbc0;
+  max-width: 100%;
+  align-self: flex-end;
+  margin:2px;
+  border-radius: 10px 10px 0 10px;
+}
+.output-message {
+  display: inline-block;
+  background: #fa834d;
+  max-width: 100%;
+  align-self: flex-start;
+  margin: 2px;
+  border-radius: 10px 10px 10px 0;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  margin-bottom:0;
+  background:  #f5f3f0;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-width: 4px;
+  border-color: rgb(161, 163, 166);
+}
+
+#message-input {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+#send-button{
+  background: transparent;
+  border:none;
+
+}
+.chat-input img{
+  height: 30px;
+  width: 35px;
+  transition: background 0.5s linear;
+}
+
+.chat-input img:hover{
+  background:  #f5f3f0;
+}
+
+/*.prompt{
+  position: fixed;
+  bottom: 360px;
+  right: 200px;
+  height: 400px;
+  width: 400px;
+  background-color: #CBD3D1;
+  opacity:0.3;
+  border-radius: 25px;
+}
+.prompt-text{
+  font-size: 25px;
+  padding-left: 20px;
+  padding-top: 20px;
+  line-height:200%;
+}
+.prompt-text p{
+  line-height:200%
+}*/
+.prompt{
+  display: flex;
+  background-color:  #f5f3f0;
+  height: 30px;
+  flex-direction: row;
+  margin: 5px;
+  list-style: none;
+  gap: 10px;
+}
+.prompt button{
+  height: 30px;
+  border-radius: 18px;
+  text-align: justify;
+  color: #ffffff;
+  background-color: #4d4c4c;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  position: relative;
+  padding: 0 15px;
+  font-size: medium;
+  opacity:0.3;
+}

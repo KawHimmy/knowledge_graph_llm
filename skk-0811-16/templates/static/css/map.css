@@ -1,0 +1,73 @@
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+.position-map .outset {
+    width:170px;
+    min-height: 20px;
+    vertical-align: middle;
+}
+
+.position-map .input {
+    display: block;
+    margin-top: 10px;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="search"] {
+    padding: 15px 8px;
+    line-height: 1;
+    height: 18px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    transition: border linear .2s,box-shadow linear .2s;
+    vertical-align: middle;
+}
+
+.position-map .btn {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    text-align: center;
+    background: #0089e1;
+    color: #fff;
+    min-height: 34px;
+    line-height: 34px;
+    padding: 0 15px;
+    -webkit-transition: background .3s,border .3s;
+    transition: background .3s,border .3s;
+}
+
+.contact-map-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.contact-map-wrapper #r-result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 16px;
+    height: 30px;
+    width: 280px;
+}
+.contact-map-wrapper #r-result input{
+    height: 100%;
+    width: 100%;
+    line-height: 30px;
+    background-color: #fff;
+    padding: 0 8px;
+    font-size: 14px;
+}
+#r-result input:focus{
+    border: 1px solid #3385ff;
+}
+#r-result input::-webkit-input-placeholder{
+    color: #999999;
+}
+#r-result input::-moz-placeholder{
+    color: #999999;
+}
+#r-result input:-ms-input-placeholder{
+    color: #999999;
+}

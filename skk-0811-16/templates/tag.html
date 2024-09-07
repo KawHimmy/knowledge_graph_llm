@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>智能推荐</title>
+    <meta name="theme-color" content="#ffc91d"/>
+    <link rel="icon" href="static/picture/logo.png" sizes="32x32"/>
+    <link rel="icon" href="static/picture/logo-2.png" sizes="192x192"/>
+    <link href="static/css/kico.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/paul.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="static/css/animate.css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/boxicons.min.css">
+    <link rel="stylesheet" href="static/css/flaticon.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/responsive.css">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+    <style>
+         /*新添加的样式*/
+        .left-buttons {
+            display: flex;
+            margin-left: 8vw;
+            flex-direction:column;
+            margin-top: 3vh;
+        }
+
+         .left-buttons button {
+             user-select: none;
+             position: relative;
+             overflow: hidden;
+             width: 300px;
+             height: 300px;
+             opacity: 1;
+             color: #fff;
+             border: none;
+             cursor: pointer;
+             font-family: PingFang-SC-Heavy;
+             font-weight: 500;
+             font-size: 20px;
+             text-align: center;
+             line-height: 40px;
+             background: none;
+         }
+         .left-buttons button img {
+            /* 调整图片大小 */
+            width: 100%;
+            height: 100%;
+        }
+
+         .left-buttons button::after {
+             content: "";
+             background: #f1f1f1;
+             display: block;
+             position: absolute;
+             left: 50%;
+             top: 50%;
+             transform: translate(-50%, -50%);
+             width: 1000px;
+             height: 1000px;
+             opacity: 0;
+             transition: all 1s;
+         }
+
+         
+
+         .left-buttons button.canClick:active::after {
+             width: 50px;
+             height: 50px;
+             opacity: 0.3;
+             transition: 0s;
+         }
+
+        .right-box {
+            background: rgba(245, 235, 197, 0.85);
+            border: 1px solid #ccc;
+            opacity: 0.8;
+            color: #0b0b0b;
+            width: 600px;
+            height: 15vh;
+            padding: 20px;
+            margin-top: 3vh;
+            text-align: center;
+            margin-left: 8vw;
+            margin-right: 5vw;
+        }
+        .gonglue {
+            background: #edf8e2;
+            margin-top: 3vh;
+            width: 80vw;
+            height: 87vh; /* 分割线高度，可以根据需要调整 */
+            padding: 20px;
+            text-align: left;
+            margin-left: 4vw;
+            overflow-y: auto;
+            letter-spacing: 2px;
+            white-space: pre-wrap;
+        }
+
+        .icon-container-container{
+            position: absolute;
+            top: 10%;
+            transform: translateX(-63%);
+            display: flex;
+            flex-direction: column; /* 元素竖直排列 */
+        }
+
+         .icon-container {
+             margin-top: 20vh;
+             user-select: none;
+             position: relative;
+             z-index: 2;
+             overflow: hidden;
+             padding: 20px;
+             width: 8vw;
+             height: 150px; /* 设置按钮的高度 */
+             display: inline-block;
+         }
+
+         .icon-text {
+             display: flex;
+             position: absolute;
+             align-self: center;
+             justify-self: center;
+             margin-left: 1.3vw;
+             transform: translateY(-320%);
+             font-size: 16px;
+             font-weight: bold;
+             font-family: Arial, sans-serif;
+             color: #ffffff;
+             pointer-events: none; /* 防止文字干扰鼠标事件 */
+         }
+
+         .icon {
+             cursor: pointer;
+             width: 100%;
+             height: auto;
+             animation:
+                     bpm 1.5s linear,
+                     pulse 1s 1.5s linear infinite;
+         }
+
+         .icon:hover{
+             transition-delay: 1s;
+             animation:none;
+         }
+
+         @keyframes pulse {
+             from,
+             75%,
+             to {
+                 transform: scale(1);
+             }
+
+             25% {
+                 transform: scale(0.9);
+             }
+
+             50% {
+                 transform: scale(1.2);
+             }
+         }
+
+         @keyframes bpm {
+             from {
+                 transform: scale(0);
+             }
+
+             37.5% {
+                 transform: scale(1.2);
+             }
+
+             75%,
+             to {
+                 transform: scale(1);
+             }
+         }
+
+         .vertical-line {
+             position: absolute;
+             top: 0;
+             right: 0;
+             bottom: 0;
+             margin-top: 3vh;
+             border-right: 2px solid #ff0000; /* 分割线样式，可以根据需要调整颜色和宽度 */
+             height: 87vh; /* 分割线高度，可以根据需要调整 */
+             margin-right: 20px; /* 调整分割线与图标之间的间距 */
+         }
+
+         .line-items {
+             margin-left: 1vw;
+             position: relative;
+         }
+
+         .gonglue-backgound-1 {
+             position: absolute;
+             top: 0;
+             right: 0;
+             margin-top: 3vh;
+             min-width: 5vw; /* 分割线宽度 */
+             height: 87vh; /* 分割线高度，可以根据需要调整 */
+             background: #edf8e2; /* 背景颜色 */
+             transform: translateX(80%);
+         }
+
+    </style>
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="preloader-wrap">
+            <div class="preloader-logo">
+                <img src="static/picture/logo.png" alt="" class="img-fluid">
+            </div>
+           <div class="plane-path">
+               <img src="static/picture/Plane.png" alt="" class="animi-plane">
+           </div>
+        </div>
+    </div>
+
+
+     <div class="topbar-area">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-5 col-md-5 tob-contact-row">
+                     <div class="topbar-contact">
+                         <ul>
+                             <li><i class='bx bxs-phone'></i><a href="tel:20211120180">服务外包</a></li>
+                             <li><i class='bx bxs-envelope'></i><a href="javascript:;"><span class="__cf_email__" data-cfemail="2f464149406f4a574e425f434a014c4042">旅游推荐</span></a></li>
+                         </ul>
+                     </div>
+                 </div>
+
+
+                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-6">
+                       <div class="custom-select languege-select">
+                            <select>
+                              <option value="0">中文</option>
+                              <option value="1">BAN</option>
+                              <option value="2">FSP</option>
+                              <option value="3">ENG</option>
+                            </select>
+                        </div>
+                 </div>
+             </div>
+
+         </div>
+     </div>
+    <header>
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                        <div class="navbar-wrap">
+                            <div class="logo d-flex justify-content-between">
+                                <a href="" class="navbar-brand"> <img src="static/picture/logo.png" alt=""></a>
+                            </div>
+                            <div class="navbar-icons">
+                                <div class="searchbar-open">
+                                    <i class="flaticon-magnifier"></i>
+                                </div>
+
+                                <div class="mobile-menu d-flex ">
+                                    <div class="top-search-bar m-0 d-block d-xl-none">
+                                    </div>
+
+                                    <a href="javascript:void(0)" class="hamburger d-block d-xl-none">
+                                        <span class="h-top"></span>
+                                        <span class="h-middle"></span>
+                                        <span class="h-bottom"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <nav class="main-nav">
+                            <div class="navber-logo-sm">
+                                <img src="static/picture/logo-2.png" alt="" class="img-fluid">
+                            </div>
+                            <ul>
+                                <li><a href="index.html">主页</a></li>
+                                <li><a href="chat.html">智能化对话</a></li>
+                                <li><a href="tag.html">偏好推荐</a></li>
+                                <li><a href="map.html">城市路线查询 </a></li>
+                                <li><a href="contact.html">联系我们 </a></li>
+                            </ul>
+                            <div class="navbar-icons-2">
+                                <a href="penson.html">
+                                    <i class="flaticon-user"></i>
+                                </a>
+                            </div>
+                            <div class="sidebar-contact">
+                                <ul>
+                                    <li class="sidebar-single-contact"><i class='bx bxs-phone'></i> <a href="tel:666">+1 20211120180</a></li>
+                                    <li class="sidebar-single-contact"><i class='bx bxs-envelope'></i><a href="javascript:;"><span class="__cf_email__" data-cfemail="2f464149406f4a574e425f434a014c4042">[email&#160;protected]</span></a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <form>
+                <div class="main-searchbar">
+                    <div class="searchbar-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+                    <input type="text" placeholder="Search Here......">
+                    <div class="searchbar-icon">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </header>
+    <div class="all" style="
+    margin-top: -3vh;
+    background-size: cover; /* 图片按比例缩放，尽可能填充容器 */
+    background-repeat: no-repeat; /* 不重复显示背景图片 */
+    background-position: center; /* 图片居中显示 */
+    min-height: 84vh">
+
+
+
+
+        <div class="verticle-items" style="display: flex; flex-direction: row; min-height: 90vh">
+            <div class="row-items" style="display: flex; flex-direction: column;">
+                <div class="left-buttons">
+                    <div class="t-buttons" style="display: flex; flex-direction: row;border: none;">
+                        <button class="button canClick" onclick="refreshButtons();add(0);updateText(0);" ><img src="static/image/260.jpg"></button>
+                        <button class="button canClick" onclick="refreshButtons();add(1);updateText(1);"><img src="static/image/488.jpg"></button>
+                    </div>
+                    <div class="t-buttons" style="display: flex; flex-direction: row;margin-top: 5px;">
+                        <button class="button canClick" onclick="refreshButtons();add(3);updateText(3);"><img src="static/image/799.jpg"></button>
+                        <button class="button canClick" onclick="refreshButtons();add(4);updateText(4);"><img src="static/image/369.jpg"></button>
+                    </div>
+                </div>
+                <div class="right-box">
+                    <p id="box-text">推荐景点</p>
+                </div>
+            </div>
+            <div class="line-items">
+                <div class="vertical-line"></div>
+                <div class="gonglue-backgound-1"></div>
+                <div class="icon-container-container">
+                    <div class="icon-container">
+                        <img class="icon" src="static/image/heart.svg" alt="" srcset="" onclick="tuijianText();">
+                        <span class="icon-text">生成攻略</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="gonglue">
+                <p id="gonglue-text">攻略文本</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="static/js/kico.js"></script>
+    <script src="static/js/paul.js"></script>
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/jquery.magnific-popup.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/typed.js"></script>
+    <script src="static/js/main.js"></script>
+    <script>
+        function refreshButtons() {
+    // 使用 Ajax 请求从服务器获取新的图片 URL
+    $.ajax({
+        url: '/get_button_images',  // 用于获取新图片 URL 的端点
+        type: 'GET',
+        success: function(data) {
+            // 使用新的 URL 更新按钮上的图片
+                let num1 = Math.floor(Math.random() * 101)+1;
+                do {
+                    num2 = Math.floor(Math.random() * 101) + 1;
+                } while (num2 === num1);
+                do {
+                num3 = Math.floor(Math.random() * 101) + 1;
+                } while (num3 === num2 || num3=== num1);
+                do {
+                num4 = Math.floor(Math.random() * 101) + 1;
+                } while (num4 === num3 || num4 === num2 || num4=== num1);
+                $('.button img').eq(0).attr('src', data[num1]); // 更新每个按钮的图片
+                $('.button img').eq(1).attr('src', data[num2]);
+                $('.button img').eq(2).attr('src', data[num3]);
+                $('.button img').eq(3).attr('src', data[num4]);
+        
+        }
+    });
+}
+
+
+
+    </script>
+    <script>
+        function add(buttonIndex) {
+        // 使用Ajax发送POST请求
+        $.ajax({
+            url: '/get_random_words',
+            type: 'POST',
+            data: { buttonIndex: buttonIndex },
+            success: function(response) {
+                console.log(response);  // 在控制台中打印服务器响应
+                refreshButtons();
+            }
+        });
+    }
+    </script>
+    <script>
+        function updateText(buttonIndex) {
+            $.ajax({
+                type: 'POST',
+                url: '/commadation',
+                data: { buttonIndex: buttonIndex },
+                success: function(response) {
+                    // 更新框框里的文字
+
+                    if (response.top_k_recommendations) {
+  document.getElementById('box-text').innerText = response.top_k_recommendations;
+}
+                },
+                error: function(error) {
+                    console.log('AJAX request failed: ' + error.statusText);
+                }
+            });
+        }
+    </script>
+    <script>
+        function tuijianText() {
+            $.ajax({
+                type: 'POST',
+                url: '/tuijian_gonglue',
+                success: function(response) {
+                    // 更新框框里的文字
+
+                    if (response.recommended_texts) {
+  document.getElementById('gonglue-text').innerText = response.recommended_texts;
+  console.log('hey');
+}
+                },
+                error: function(error) {
+                    console.log('AJAX request failed: ' + error.statusText);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+img {
+	width: 150px;
+	height: 150px;
+}
+ 
+#login-img{
+	margin-left: 30px;
+	float: left;
+}
+ 
+#register-img{
+	float: right;
+	margin-right: 35px;
+}
+ 
+#img-control {
+	margin-top: 65px;
+}
+ 
+#form-border {
+	background-color: rgba(251, 133, 6, 0.6);
+	width: 800px;
+	height: 450px;
+	display: flex;
+	margin-top: 20rem;
+	margin-left: 30rem;
+	flex-direction: column;
+}
+#form-border h3{
+	margin-left: 10rem;
+	font-size: 3rem;
+}
+ 
+.form-input {
+	width: 200px;
+	height: 25px;
+	padding-left: 5px;
+	border-radius: 5px;
+}
+ 
+.form-label {
+	margin-left: 30px;
+}
+ 
+.form-button {
+	width: 70px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 70px;
+	font-size: 18px;
+	font-family: "宋体";
+}
+ 
+#div-title {
+	text-align: center;
+	margin-top: 100px;
+	height: 2rem;
+}
+ 
+h3 {
+	font-size: 40px;
+	font-family: "楷体";
+}
+
+ 
+#password {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+ 
+#register {
+	margin-left: 70px;
+}
+
+#form-border1 {
+	background-color: rgba(134, 133, 131, 0.6);
+	width: 900px;
+	height: 600px;
+	display: flex;
+	margin-top: 8rem;
+	margin-left: 17rem;
+	flex-direction: column;
+}
+
+
+
+#botton-mid {
+	margin-top: 10rem;
+	height: 4rem;
+	border-width: 10px;
+	flex-direction:row;
+	display:flex;
+}
